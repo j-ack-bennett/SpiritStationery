@@ -4,7 +4,7 @@ const db = require('../db/items')
 
 const router = express.Router()
 
-router.get('/items', (req, res) => {
+router.get('/', (req, res) => {
   db.getItems()
     .then(results => {
       res.json({ results })
@@ -18,7 +18,8 @@ router.get('/items', (req, res) => {
 
 router.get('/itemsandnames', (req, res) => {
   db.getNamesAndItems()
-    .then(results => {
+    .then(results => { 
+      console.log(results)
       res.json({ results })
       return null
     })
@@ -28,7 +29,7 @@ router.get('/itemsandnames', (req, res) => {
     })
 })
 
-router.post('/items', (req, res) => {
+router.post('/itemsandnames', (req, res) => {
   const name = req.body.name
   const item_id = req.body.item_id
   db.addName(name, item_id)

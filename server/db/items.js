@@ -6,7 +6,7 @@ function getItems(db = connection) {
 function getNamesAndItems(db = connection){
   return db('items')
   .join('names', 'items.id', 'names.item_id' )
-  .select('*', 'name.id AS id')
+  .select('*', 'names.id AS id')
 }
 function addName(name, item_id, db = connection){
   return db('names')
