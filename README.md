@@ -1,3 +1,5 @@
+https://media.giphy.com/media/yCY0QS4BhonQ6KPPGn/giphy.gif
+
 # Fullstack boilerplate
 
 ## Getting Started
