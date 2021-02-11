@@ -8,8 +8,13 @@ function getNamesAndItems(db = connection){
   .join('names', 'items.id', 'names.item_id' )
   .select('*', 'name.id AS id')
 }
+function addName(name, item_id, db = connection){
+  return db('names')
+  .insert({name:name, item_id:item_id})
+}
 
 module.exports = {
   getItems,
-  getNamesAndItems
+  getNamesAndItems,
+  addName
 }
