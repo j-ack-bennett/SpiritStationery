@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { navigate } from '../actions'
-import { getItems } from '../apis/office'
+import { navigate, addName, saveName } from '../actions'
+import { getItems, addNames } from '../apis/office'
 
 
 const Form = (props) => {
 
 	const [item, setItem] = useState({})
+	// const [name, setName] = useState({})
 
 	const backToHome = () => {
 		props.dispatch(navigate('home'))
@@ -14,10 +15,14 @@ const Form = (props) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
+		// console.log(event.target.name.value)
+		const name = event.target.name.value
 		getItems()
 		.then(res=> {
 			const results = res.results
-			setItem(getRandomItem(results))
+			const randomItem = getRandomItem(results)
+			setItem(randomItem)
+			props.dispatch(saveName(name, randomItem.id))
 		})
 	}
 
@@ -42,7 +47,8 @@ const Form = (props) => {
 
 function mapStateToProps(globalState) {
 	return {
-		activePage: globalState.activePage
+		activePage: globalState.activePage,
+		officeStuff: globalState.officeStuff
 	}
 }
 

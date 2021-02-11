@@ -9,3 +9,14 @@ export function getItems () {
 			return res.body
 		})
 }
+
+export function addNames (name, item_id) {
+	console.log(name, item_id)
+	return request.post(rootUrl)
+	.send(name, item_id)
+	.then(res => {
+		return res.body
+	})
+
+}
+
