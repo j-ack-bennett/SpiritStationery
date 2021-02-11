@@ -3,4 +3,13 @@
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.container {
+  background-color: #ff8000;
+  display: flex;
+  justify-content: center;
+  border: 25px solid saddlebrown;
+  box-shadow: 20px 20px brown;
 }
