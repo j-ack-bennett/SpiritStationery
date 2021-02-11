@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+
+//components
+import Home from './Home'
+import Form from './Form'
+import AllMatches from './AllMatches'
 
 const App = (props) => {
 
-  useEffect(() => {
-    props.dispatch(fetchFruits())
-  })
+
+  const renderSwitch = () => {
+    switch (props.activePage.target) {
+
+      case 'home':
+        return <Home />
+      case 'form' :
+        return <Form />
+      case 'all-matches' :
+        return <AllMatches />
+      default :
+        break
+    }
+  }
 
   return (
-    <>
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div>
+      {renderSwitch()}
+    </div>
   )
 }
-const mapStateToProps = (globalState) => {
-  return {
-    fruits: globalState.fruits
-  }
-}
 
+function mapStateToProps(globalState) {
+  return {
+    activePage: globalState.activePage
+  }
+} 
 export default connect(mapStateToProps)(App)
 
