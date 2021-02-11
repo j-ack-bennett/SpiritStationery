@@ -1,7 +1,17 @@
+import { getMatches } from '../apis/office'
 export const NAVIGATE = 'NAVIGATE'
 export const ADD_NAME = 'ADD_NAME'
 
+export const SET_MATCHES = 'SET_MATCHES'
 import { addNames } from '../apis/office' 
+
+export function setMatches (matches) {
+  // console.log(matches)
+  return {
+    type: SET_MATCHES,
+    matches: matches
+  }
+}
 
 export function navigate (target) {
   return {
@@ -37,13 +47,20 @@ export function addName (name, item_id) {
 //   }
 // }
 
-export function saveWombat(name, item_id) {
-  console.log('preparing the thunk (saveWombat)')
+export function saveName (name, item_id) {
   return dispatch => {
-    console.log('running the thunk (saveWombat)')
     addNames(name, item_id)
-      .then(id => {
-        console.log('saved wombat', id)
+      .then(() => {
+        return null
+      })
+  }
+}
+
+export function fetchMatches (){
+  return dispatch => {
+    getMatches()
+       .then(matches => {
+        dispatch(setMatches(matches))
         return null
       })
   }
