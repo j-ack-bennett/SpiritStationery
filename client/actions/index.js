@@ -1,12 +1,13 @@
-import { getFruits } from '../apis/fruits'
+import { getMatches } from '../apis/office'
 export const NAVIGATE = 'NAVIGATE'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_MATCHES = 'SET_MATCHES'
 
-export function setFruits (fruits) {
+export function setMatches (matches) {
+  // console.log(matches)
   return {
-    type: SET_FRUITS,
-    fruits
+    type: SET_MATCHES,
+    matches: matches
   }
 }
 
@@ -17,19 +18,21 @@ export function navigate (target) {
   }
 }
 
-
-
-
-
-
-
-
-
 export function fetchFruits () {
   return dispatch => {
     return getFruits()
       .then(fruits => {
         dispatch(setFruits(fruits))
+        return null
+      })
+  }
+}
+
+export function fetchMatches (){
+  return dispatch => {
+    getMatches()
+       .then(matches => {
+        dispatch(setMatches(matches))
         return null
       })
   }

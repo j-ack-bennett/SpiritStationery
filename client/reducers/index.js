@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import fruits from './fruits'
 import activePage from './activePage'
+import officeStuff from './officeStuff'
 
 export default combineReducers({
-  fruits,
-  activePage
+  activePage,
+  officeStuff
 })
