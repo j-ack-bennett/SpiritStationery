@@ -50,8 +50,9 @@ export function addName (name, item_id) {
 export function saveName (name, item_id) {
   return dispatch => {
     addNames(name, item_id)
-      .then(() => {
-        return null
+      .then(blah => {
+        dispatch(fetchMatches())
+        // return null
       })
   }
 }

@@ -15,7 +15,6 @@ const Form = (props) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		// console.log(event.target.name.value)
 		const name = event.target.name.value
 		getItems()
 		.then(res=> {
@@ -45,12 +44,6 @@ const Form = (props) => {
 	)
 }
 
-function mapStateToProps(globalState) {
-	return {
-		activePage: globalState.activePage,
-		officeStuff: globalState.officeStuff
-	}
-}
 
 
-export default connect(mapStateToProps)(Form)
+export default connect()(Form)
