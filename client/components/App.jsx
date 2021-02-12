@@ -2,12 +2,20 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
 
+
 //components
 import Home from './Home'
 import Form from './Form'
 import AllMatches from './AllMatches'
 
 const App = (props) => {
+
+  // const [audio] = useState(new Audio('https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3'))
+
+  // const playTunes = () => {
+  //     audio.play()
+  // }
+
 
 
   const renderSwitch = () => {
@@ -25,9 +33,12 @@ const App = (props) => {
   }
 
   return (
-    <div className="container" >
-      {renderSwitch()}
-    </div>
+    <>
+      <div className="container">
+        {renderSwitch()}
+      </div>
+    </>
+
   )
 }
 
