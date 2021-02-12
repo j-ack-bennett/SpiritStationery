@@ -19,7 +19,6 @@ router.get('/', (req, res) => {
 router.get('/itemsandnames', (req, res) => {
   db.getNamesAndItems()
     .then(results => { 
-      console.log(results)
       res.json({ results })
       return null
     })

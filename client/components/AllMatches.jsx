@@ -15,7 +15,7 @@ const AllMatches = (props) => {
         <>
         {/* {console.log(props.officeStuff)} */}
         <div>
-            <h1>Welcome to the AllMatches</h1>
+            <h1>Previous Matches</h1>
             {
                 props.officeStuff.map(match => {
                     return (
@@ -29,7 +29,7 @@ const AllMatches = (props) => {
                     )
                 })
             }
-            <button onClick={backToHome}>back to home</button>
+            <button className='home-button' onClick={backToHome}>Back to Home</button>
         </div>
         </>
     )

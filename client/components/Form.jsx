@@ -32,16 +32,16 @@ const Form = (props) => {
 
 	return (
 		<div>
-			<h1>Welcome to the form</h1>
+			<h1>Find Your Spirit Stationary</h1>
 			<form onSubmit={handleSubmit}>
 				<input type='text' name='name' placeholder='Dwight Schrute' />
 				<button className='form-button'>Get Yo Match</button>
 			</form>
-			{item == null ? <img src='https://media.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif' /> : <> <h1>{item.item}</h1>
+			{item == null ? <img className='match-gif' src='https://media.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif' /> : <> <h1>{item.item}</h1>
 			<img className='image' src={item.image}/> </> }
 			{/* <img src='https://media.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif' /> */}
 			
-			<button className='' onClick={backToHome}>back to home</button>
+			<button className='home-button' onClick={backToHome}>Back to Home</button>
 		</div>
 	)
 }

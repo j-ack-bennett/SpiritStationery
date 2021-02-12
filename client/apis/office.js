@@ -11,7 +11,6 @@ export function getItems () {
 }
 
 export function addNames (name, item_id) {
-	console.log(name, item_id)
 	return request.post(rootUrl + '/itemsandnames')
 	.send({name: name, item_id: item_id})
 	.then(res => {
@@ -24,7 +23,6 @@ export function addNames (name, item_id) {
 export function getMatches () {
     return request.get(rootUrl + '/itemsandnames')
     .then(res => {
-        console.log(res.body)
       return res.body.results
     })
 }

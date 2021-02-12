@@ -23,6 +23,9 @@ h1 {
 .image {
   height: 700px;
   max-width: 1700px;
+  border-radius: 50px;
+  border: 10px solid brown;
+  box-shadow: 15px 15px saddlebrown;
 }
 
 .gif {
@@ -53,8 +56,28 @@ h1 {
   border: 10px solid black;
 }
 
+.home-button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: chartreuse;
+  font-size: 47px;
+  box-shadow: 15px 15px green;
+  border-radius: 50px;
+  border: 10px solid black;
+}
+
 .entry-div {
   height: 1000px;
   display: flex;
   align-items: center;
+}
+
+.match-gif {
+  margin-top: 20px;
+  border-radius: 50px;
+  border: 5px solid black;
+  box-shadow: 15px 15px grey;
 }

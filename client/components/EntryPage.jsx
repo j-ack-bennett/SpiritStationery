@@ -9,7 +9,7 @@ const EntryPage = (props) => {
 
     return (
         <div className='entry-div'>
-            <button onClick={handleClick} className='entry-page-button'>
+            <button onClick={handleClick} className='form-button'>
                 Enter the office!
             </button>
         </div>
