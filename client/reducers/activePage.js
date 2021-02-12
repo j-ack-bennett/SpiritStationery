@@ -1,6 +1,6 @@
 import { NAVIGATE } from '../actions'
 
-const initialState = {target: 'home'}
+const initialState = {target: 'entry-page'}
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

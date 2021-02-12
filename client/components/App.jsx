@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import Home from './Home'
 import Form from './Form'
 import AllMatches from './AllMatches'
+import EntryPage from './EntryPage'
 
 const App = (props) => {
 
@@ -21,6 +22,8 @@ const App = (props) => {
   const renderSwitch = () => {
     switch (props.activePage.target) {
 
+      case 'entry-page':
+        return <EntryPage />
       case 'home':
         return <Home />
       case 'form' :
