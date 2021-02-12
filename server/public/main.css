@@ -8,3 +8,14 @@
 body {
     font-family: 'TheOffice', sans-serif;
 }
+
+button {
+    font-family: 'TheOffice', sans-serif;
+}
+
+input {
+    font-family: 'TheOffice', sans-serif;
+    padding: 35px 150px;
+    border-radius: 50px;
+    margin-right: 150px;
+}

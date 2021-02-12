@@ -6,7 +6,7 @@ import { getItems, addNames } from '../apis/office'
 
 const Form = (props) => {
 
-	const [item, setItem] = useState({})
+	const [item, setItem] = useState(null)
 	// const [name, setName] = useState({})
 
 	const backToHome = () => {
@@ -35,11 +35,13 @@ const Form = (props) => {
 			<h1>Welcome to the form</h1>
 			<form onSubmit={handleSubmit}>
 				<input type='text' name='name' placeholder='Dwight Schrute' />
-				<button>Get Yo Match</button>
+				<button className='form-button'>Get Yo Match</button>
 			</form>
-			<h1>{item.item}</h1>
-			<img src={item.image}/>
-			<button onClick={backToHome}>back to home</button>
+			{item == null ? <img src='https://media.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif' /> : <> <h1>{item.item}</h1>
+			<img className='image' src={item.image}/> </> }
+			{/* <img src='https://media.giphy.com/media/ZmuUzqOIEojjnd4tN8/giphy.gif' /> */}
+			
+			<button className='' onClick={backToHome}>back to home</button>
 		</div>
 	)
 }

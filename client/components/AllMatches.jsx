@@ -21,7 +21,7 @@ const AllMatches = (props) => {
                     return (
                         <div key={match.id}> 
                             <h3>{match.name} is a {match.item}</h3>
-                            <img className='item-image' 
+                            <img className='image' 
                                 src={match.image} 
                                 alt={match.item} 
                             />

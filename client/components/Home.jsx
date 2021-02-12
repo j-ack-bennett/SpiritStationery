@@ -13,11 +13,11 @@ const Home = (props) => {
     return (
         <div>
             <h1>Welcome to the Office</h1>
-
-            <img src="https://media.giphy.com/media/yCY0QS4BhonQ6KPPGn/giphy.gif" alt="a gif of an office related thing happening"/>
+            {/* <div className='gif'></div> */}
+            <img className='gif' src="https://media.giphy.com/media/yCY0QS4BhonQ6KPPGn/giphy.gif" alt="a gif of an office related thing happening"/>
             <div>
-            <button onClick={() => handleClick('form')}>jump to form</button>
-            <button onClick={() => handleClick('all-matches')}>jump to all matches</button>
+                <button className='button-hp' onClick={() => handleClick('form')}>Find Your Match</button>
+                <button className='button-hp' onClick={() => handleClick('all-matches')}>Go To All Matches</button>
             </div>
 
         </div>
