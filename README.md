@@ -1,31 +1,13 @@
-https://media.giphy.com/media/yCY0QS4BhonQ6KPPGn/giphy.gif
+# Spirit Stationery
 
-# Fullstack boilerplate
+This was a one day group project created during my time at Enspiral Dev Academy.
 
-## Getting Started
+We wanted to create a really simple and boring website, so boring infact that it was about office stationery.
+The concept of this website was to enter your name in to find your "Spirit Stationery", almost like finding your "Spirit Animal".
 
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
+The project incorporated the use of a fullstack lineup including:
 
-### From the command line
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000).
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
+* [React](https://reactjs.org/docs/getting-started.html)
+* [Redux](https://redux.js.org/)
+* [Express](https://expressjs.com/en/api.html)
+* [Knex.js (SQL)](https://knexjs.org/)
